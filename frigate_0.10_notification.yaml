@@ -288,7 +288,7 @@ action:
                   update: "{{ new_snapshot and not loitering and not presence_changed and not zone_only_changed and not entered_zones_changed }}"
               - alias: "Notify on loitering or significant change"
                 choose:
-                  - conditions: "{{ loitering or new_snapshot or (not home and presence_changed) or stationary_moved or zone_only_changed or entered_zones_changed }}"
+                  - conditions: "{{ loitering or new_snapshot or (not home and (presence_changed or stationary_moved or zone_only_changed or entered_zones_changed) }}"
                     sequence:
                       - choose:
                         - conditions: "{{ not group_target }}"
