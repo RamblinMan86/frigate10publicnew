@@ -18,6 +18,8 @@ blueprint:
       - Mobile App Device **or** the name of a Notification Group
 
     ### Optional features:
+      - You can optionally send the notification as a critical alert.
+      - You can choose whether or not to update the notification with new thumbnails as they become available.
       - You can limit notifications to objects entering pre-defined [zones][2] in Frigate.
       - You can specify which [zones][2] to be notified about. This must be a list (e.g.):
         ```yaml
@@ -31,6 +33,7 @@ blueprint:
       - You can disable notifications if a presence entity or group is "home".
       - You can configure a cooldown for the camera to reduce the number of notifications when back-to-back events occur.
       - You can silence future notifications for a defined amount of time through actionable notifications. This is helpful in situations where you know you will be triggering detections for an extended period of time. i.e. kids playing outside.
+      - You can set a loitering timer to notify you of stationary objects that remain for a set period of time.
 
     [1]: https://companion.home-assistant.io/docs/notifications/notifications-basic#sending-notifications-to-multiple-devices
     [2]: https://blakeblackshear.github.io/frigate/configuration/cameras#zones
