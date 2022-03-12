@@ -40,7 +40,7 @@ blueprint:
     [3]: https://blakeblackshear.github.io/frigate/configuration/objects
 
   domain: automation
-  source_url: https://gist.github.com/hunterjm/23c1588a9f2b8b9c2a62ffc364e17f8c
+  source_url: https://gist.github.com/hunterjm/8ff0005104dce3f28923294f49a443b1
   input:
     camera:
       name: Frigate Camera
