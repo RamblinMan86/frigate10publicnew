@@ -160,8 +160,7 @@ variables:
   presence_entity: !input presence_filter
   cooldown: !input cooldown
   loiter_timer: !input loiter_timer
-  fps_value: "{{ states('sensor.' + camera + '_camera_fps') }}"
-  fps: "{{ fps_value|int if is_number(fps_value) or 5 }}"
+  fps: "{{ states('sensor.' + camera + '_camera_fps')|int(5) }}"
 action:
   - choose:
     - alias: "Silence New Object Notifications"
